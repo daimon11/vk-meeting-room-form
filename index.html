@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./style/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=IBM+Plex+Serif:wght@400;700&family=Inter:wght@600;700&family=Roboto:ital,wght@0,500;0,700;0,900;1,400&display=swap"
+    rel="stylesheet">
+
+  <script src="./script/index.js" type="module"></script>
+  <title>Module 5. CRM</title>
+</head>
+
+<body>
+  <main class="page">
+
+    <div class="modal modal_visible" id="openModal">
+      <form class="form" id="my-form">
+        <div class="container">
+          <div class="form__title-wrapper">
+            <h1 class="form__title-box">Выбрать переговорную</h1>
+          </div>
+
+          <fieldset class="form__box">
+
+            <label class="form__label form__label--position_left">
+              <span class="form__label-name">Номер башни</span>
+              <input class="form__text-input" name="tower" list="tower" required>
+              <datalist id="tower">
+                <option value="A">A</option>
+                <option value="Б">Б</option>
+              </datalist>
+            </label>
+
+            <label class="form__label form__label--position_left">
+              <span class="form__label-name">Номер этажа</span>
+              <input class="form__text-input" name="floor" required list="floor">
+              <datalist id="floor">
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12</option>
+                <option value="13">13</option>
+                <option value="17">15</option>
+                <option value="16">16</option>
+                <option value="17">17</option>
+                <option value="18">18</option>
+                <option value="19">19</option>
+                <option value="20">20</option>
+                <option value="21">21</option>
+                <option value="22">22</option>
+                <option value="23">23</option>
+                <option value="24">24</option>
+                <option value="25">25</option>
+                <option value="26">26</option>
+                <option value="27">27</option>
+              </datalist>
+            </label>
+
+            <label class="form__label form__label--position_left">
+              <span class="form__label-name">Номер переговорной</span>
+              <input class="form__text-input" name="meeting room" required list="meeting room">
+              <datalist id="meeting room">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+              </datalist>
+            </label>
+
+            <label class="form__label form__label--great_height">
+              <span class="form__label-name">Комментарии</span>
+              <textarea class="form__description" type="text" name="comments"></textarea>
+            </label>
+
+            <div class="form__date">
+              <span class="form__label-name">Дата и Время</span>
+              <div class="form__date-wrapper">
+                <label class="form__label">
+                  <input class="form__text-input form__text-input--type_date" placeholder="Дата" type="text"
+                    onfocus="(this.type = 'date')" onblur="(this.type='text')" name="day" required>
+                </label>
+                <label class="form__label">
+                  <input class="form__text-input form__text-input--type_date" placeholder="Время" type="text"
+                    onfocus="(this.type = 'time')" onblur="(this.type='text')" name="time" required>
+                </label>
+              </div>
+            </div>
+
+            <button class="form__button--type_reset form__button" type="button" value="Добавить товар"
+              form="my-form">Очистисть форму
+            </button>
+
+            <button class="form__button--lit-text form__button" type="submit" value="Добавить товар"
+              form="my-form">Отправить форму
+            </button>
+
+
+          </fieldset>
+        </div>
+
+      </form>
+
+    </div>
+
+
+
+  </main>
+</body>
+
+</html>

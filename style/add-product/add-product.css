@@ -1,0 +1,226 @@
+.page {
+  position: relative;
+  text-transform: uppercase;
+  font-family: 'Inter', sans-serif;
+  color: #6E6893;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  padding-top: 100px;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(242, 240, 249, 0.9);
+  z-index: 2;
+}
+
+.form {
+  position: relative;
+  margin: 0 auto;
+  display: block;
+  padding: 32px 106px;
+  background-color: #F2F0F9;
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.25);
+  z-index: 2;
+  max-height: 500px;
+}
+
+.form__title-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 43px 0;
+  position: relative;
+}
+
+.form__title-wrapper::after {
+  content: '';
+  position: absolute;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #C6C2DE;
+  width: 100%;
+  top: 50px;
+  left: 0;
+}
+
+.form__title-box {
+  line-height: 29px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #6E6893;
+  letter-spacing: 0.1em;
+}
+
+/* .form__button-window {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 0;
+  background-image: url(../add-product/icons/close-button-icon.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #F2F0F9;
+  right: 30px;
+  top: 20px;
+  cursor: pointer;
+  padding: 0;
+} */
+
+/* .form__id-prod {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 13px;
+} */
+
+/* .form__button-id {
+  width: 15px;
+  height: 15px;
+  border: 0;
+  background-image: url(../add-product/icons/id-button.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+/* .text-gray {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 12px;
+  color: #C5C5C5;
+} */
+
+.form__box {
+  max-width: 580px;
+  display: grid;
+  margin: 0;
+  border: 0;
+  padding: 28px;
+  grid-template-columns: minmax(200px, 250px) minmax(200px, 250px);
+  grid-template-areas:
+    "label_name label_description"
+    "form__label_position_left label_description"
+    "form__label_position_left label_right"
+    "label_discont label_price"
+    "button_reset button_img";
+  gap: 12px 24px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
+}
+
+.form__label--position_left:first-child {
+  grid-area: label_name;
+}
+
+.form__label form__label--type_date {
+  display: flex;
+  flex-direction: row;
+}
+
+.form__label--great_height {
+  grid-area: label_description;
+}
+
+.form__text-input,
+.form__description {
+  display: block;
+  background-color: #F2F0F9;
+  border: none;
+  border-radius: 6px;
+  height: 40px;
+  width: 100%;
+  padding: 0 0 0 11px;
+  margin-top: 5px;
+  resize: none;
+}
+
+.form__date-wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 15px;
+}
+
+.form__description {
+  padding: 11px;
+  min-height: 112px;
+}
+
+.form__label-name {
+  padding-left: 11px;
+  line-height: 15px;
+  letter-spacing: 0.05em;
+}
+
+.form__div {
+  position: relative;
+  grid-area: label_discont;
+}
+
+.form__block-input {
+  display: block;
+}
+
+/* .form__button-wrap {
+  display: flex;
+  padding-right: 28px;
+  padding-top: 28px;
+  flex-direction: row;
+  justify-content: space-between;
+} */
+
+.form__button {
+  border: 0;
+  padding: 11px 28px;
+  border-radius: 6px;
+  background-color: #6D5BD0;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+
+.form__button--big-text {
+  border: 0;
+  padding: 10px 25px;
+  border-radius: 6px;
+  background-color: #6D5BD0;
+  font-size: 16px;
+  text-transform: uppercase;
+  color: white;
+  cursor: pointer;
+}
+
+.form__button--type_reset {
+  margin-top: 20px;
+  grid-area: button_reset;
+  background-color: #8b2a2a;
+}
+
+.form__button--lit-text {
+  margin-top: 20px;
+  grid-area: button_img;
+}
+
+.form__bold-text {
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.modal_visible {
+  display: flex;
+}
+
+/* .border_active {
+  border: 1px solid green;
+  background: green;
+} */
